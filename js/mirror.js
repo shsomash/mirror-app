@@ -7,7 +7,7 @@ const dimensionLabels = {
   emotional: 'Emotional Well-Being',
   financial: 'Financial Well-Being',
   connections: 'Connections',
-  identity: 'Identity & Meaning'
+  identity: 'Identity'
 };
 
 const agencyClass = {
@@ -266,6 +266,7 @@ function renderEndNote() {
   return `
     <div class="mirror-end-note">
       <p>This is a snapshot, not a verdict. It shows where you are right now. Life shifts. What's in the gray zone today may become clear tomorrow.</p>
+      <p>If anything here feels persistently heavy or difficult to address on your own, that's worth paying attention to. Professional support exists for a reason.</p>
       <p>The mirror doesn't tell you what to do. It shows you where you are. What you do next is yours.</p>
     </div>`;
 }

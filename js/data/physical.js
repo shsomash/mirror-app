@@ -22,7 +22,84 @@ export const physicalTree = {
       { label: 'Movement or physical capacity declining', next: 'movement_pattern', rootCause: null },
       { label: 'Avoiding medical care', next: 'medical_avoidance', rootCause: null },
       { label: 'Relationship with your body (appearance, aging, self-image)', next: 'body_relationship', rootCause: null },
-      { label: 'Substance use affecting your body', next: 'substance_use', rootCause: null }
+      { label: 'Substance use affecting your body', next: 'substance_use', rootCause: null },
+      { label: 'Living with a health condition (chronic illness, disability)', next: 'health_condition', rootCause: null }
+    ]
+  },
+
+  /* ============================================================
+     BRANCH: LIVING WITH A HEALTH CONDITION
+     ============================================================ */
+  'health_condition': {
+    id: 'health_condition',
+    question: "What's the main challenge with your health condition?",
+    options: [
+      {
+        label: 'Managing a chronic condition (diabetes, autoimmune, heart, etc.)',
+        next: null,
+        rootCause: {
+          id: 'rc_chronic_illness_management',
+          label: 'Chronic illness management burden',
+          agency: 'PARTIAL',
+          inControl: 'Adherence, lifestyle, advocacy with providers',
+          notInControl: 'The condition itself'
+        }
+      },
+      {
+        label: 'Newly diagnosed — adjusting to a new reality',
+        next: null,
+        rootCause: {
+          id: 'rc_new_diagnosis_adjustment',
+          label: 'New diagnosis adjustment',
+          agency: 'PARTIAL',
+          inControl: 'Learning, treatment, support-seeking',
+          notInControl: 'The diagnosis; grief for previous health is real'
+        }
+      },
+      {
+        label: 'Condition is progressive or worsening',
+        next: null,
+        rootCause: {
+          id: 'rc_progressive_condition',
+          label: 'Progressive or worsening condition',
+          agency: 'LOW',
+          inControl: 'Quality of life within limits; pacing',
+          notInControl: 'Disease progression'
+        }
+      },
+      {
+        label: 'Invisible illness — people don\'t understand',
+        next: null,
+        rootCause: {
+          id: 'rc_invisible_illness',
+          label: 'Invisible illness (misunderstood by others)',
+          agency: 'PARTIAL',
+          inControl: 'Choosing who to educate; setting limits',
+          notInControl: 'Others\' understanding and accommodation'
+        }
+      },
+      {
+        label: 'Treatment fatigue — tired of managing it',
+        next: null,
+        rootCause: {
+          id: 'rc_treatment_fatigue',
+          label: 'Treatment fatigue',
+          agency: 'PARTIAL',
+          inControl: 'Simplifying where possible; support',
+          notInControl: 'The ongoing nature of the condition'
+        }
+      },
+      {
+        label: 'Can\'t afford treatment or medication',
+        next: null,
+        rootCause: {
+          id: 'rc_treatment_cost_barrier',
+          label: 'Treatment cost barrier',
+          agency: 'LOW',
+          inControl: 'Patient assistance programs, advocacy',
+          notInControl: 'Healthcare costs are systemic'
+        }
+      }
     ]
   },
 

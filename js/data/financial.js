@@ -85,7 +85,7 @@ export const financialTree = {
       { label: 'Don\'t know where money goes', next: null, rootCause: { id: 'rc_no_budget', label: 'No budget or tracking', agency: 'HIGH', inControl: 'Tracking is a learnable skill', notInControl: null } },
       { label: 'Spending when stressed, sad, or bored', next: null, rootCause: { id: 'rc_emotional_spending_direct', label: 'Emotional/stress spending', agency: 'HIGH', inControl: 'The spending and the stress source', notInControl: null } },
       { label: 'Essential costs too high', next: 'spending_essential_costs', rootCause: null },
-      { label: 'Spending to keep up appearances', next: null, rootCause: { id: 'rc_comparison_spending_appearances', label: 'Comparison spending', agency: 'HIGH', inControl: 'The comparison is stoppable', notInControl: 'Social environment triggers it' } },
+      { label: 'Spending to keep up appearances', next: null, rootCause: { id: 'rc_comparison_spending_appearances', label: 'Comparison spending', agency: 'PARTIAL', inControl: 'The comparison is stoppable', notInControl: 'Social environment triggers it' } },
       { label: 'Generosity that\'s financially unsustainable', next: null, rootCause: { id: 'rc_generosity_beyond_means', label: 'Generosity beyond means', agency: 'HIGH', inControl: 'Boundaries around giving are settable', notInControl: 'Guilt and people-pleasing may resist' } },
       { label: 'Subscription and recurring cost creep', next: null, rootCause: { id: 'rc_subscription_creep', label: 'Subscription and recurring cost creep', agency: 'HIGH', inControl: 'Auditing and canceling', notInControl: null } },
       { label: 'Partner\'s spending you can\'t control', next: null, rootCause: { id: 'rc_partner_spending', label: 'Partner\'s spending you can\'t control', agency: 'PARTIAL', inControl: 'Communication, financial boundaries', notInControl: 'You can\'t control another person' } },
@@ -190,7 +190,7 @@ export const financialTree = {
     question: "What's behind the constant worry about money?",
     options: [
       { label: 'Grew up poor', next: null, rootCause: { id: 'rc_childhood_poverty_trauma', label: 'Childhood poverty trauma (scarcity mindset persists)', agency: 'PARTIAL', inControl: 'The mindset is addressable', notInControl: 'The childhood experience can\'t be changed' } },
-      { label: 'Objectively fine but still worry', next: null, rootCause: { id: 'rc_scarcity_mindset', label: 'Scarcity mindset despite actual adequacy', agency: 'HIGH', inControl: 'Reality-checking your financial position', notInControl: null } },
+      { label: 'Objectively fine but still worry', next: null, rootCause: { id: 'rc_scarcity_mindset', label: 'Scarcity mindset despite actual adequacy', agency: 'PARTIAL', inControl: 'Reality-checking your financial position', notInControl: 'The childhood experience can shape persistent patterns' } },
       { label: 'Comparing to peers', next: null, rootCause: { id: 'rc_financial_comparison', label: 'Financial comparison to peers', agency: 'HIGH', inControl: 'The comparison is the problem', notInControl: null } },
       { label: 'Retirement fears', next: null, rootCause: { id: 'rc_retirement_anxiety', label: 'Retirement anxiety', agency: 'PARTIAL', inControl: 'Planning helps; some worry is realistic', notInControl: 'Can\'t undo past decisions' } }
     ]
@@ -201,8 +201,8 @@ export const financialTree = {
     id: 'anxiety_avoidance',
     question: "What keeps you from looking at your finances?",
     options: [
-      { label: 'Shame', next: null, rootCause: { id: 'rc_avoidance_shame', label: 'Financial avoidance driven by shame', agency: 'HIGH', inControl: 'Gradual exposure to the numbers', notInControl: 'The shame needs attention too' } },
-      { label: 'Overwhelm', next: null, rootCause: { id: 'rc_avoidance_overwhelm', label: 'Financial avoidance driven by overwhelm', agency: 'HIGH', inControl: 'Breaking it into one small step', notInControl: null } }
+      { label: 'Shame', next: null, rootCause: { id: 'rc_avoidance_shame', label: 'Financial avoidance driven by shame', agency: 'PARTIAL', inControl: 'Gradual exposure to the numbers', notInControl: 'The shame needs attention too' } },
+      { label: 'Overwhelm', next: null, rootCause: { id: 'rc_avoidance_overwhelm', label: 'Financial avoidance driven by overwhelm', agency: 'PARTIAL', inControl: 'Breaking it into one small step', notInControl: 'The overwhelm itself may have deeper roots' } }
     ]
   },
 

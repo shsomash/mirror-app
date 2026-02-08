@@ -16,7 +16,22 @@ export const identityTree = {
       { label: 'Feeling stuck or stagnant', next: 'stuck_stagnant', rootCause: null },
       { label: 'Existential questions (meaning, mortality, control)', next: 'existential', rootCause: null },
       { label: 'Identity in transition (becoming someone new)', next: 'identity_transition', rootCause: null },
-      { label: 'Carrying shame about who I am', next: 'shame', rootCause: null }
+      { label: 'Carrying shame about who I am', next: 'shame', rootCause: null },
+      { label: 'Defined by roles and responsibilities, not by who I actually am', next: 'role_collector', rootCause: null }
+    ]
+  },
+
+  // ════════════════════════════════════════════════
+  //  BRANCH: ROLE COLLECTOR
+  // ════════════════════════════════════════════════
+  'role_collector': {
+    id: 'role_collector',
+    question: "What's happening with all the roles?",
+    options: [
+      { label: 'If I stopped doing things for everyone, I wouldn\'t know who I am', next: null, rootCause: { id: 'rc_role_collector_no_core', label: 'Role collector (no core self beneath the roles)', agency: 'PARTIAL', inControl: 'Self-discovery is possible, even late', notInControl: 'The roles may be hard to shed without consequences' } },
+      { label: 'Keep adding roles because saying no feels impossible', next: null, rootCause: { id: 'rc_role_collector_cant_say_no', label: 'Role accumulation from inability to say no', agency: 'HIGH', inControl: 'Boundaries are learnable', notInControl: null } },
+      { label: 'Roles conflict with each other and I\'m stretched thin', next: null, rootCause: { id: 'rc_role_conflict', label: 'Role conflict (competing demands)', agency: 'PARTIAL', inControl: 'Prioritizing; some roles may be droppable', notInControl: 'Some roles are genuinely non-negotiable' } },
+      { label: 'Lost a major role and don\'t know who I am without it', next: null, rootCause: { id: 'rc_identity_single_role', label: 'Identity built on single role, role ended', agency: 'HIGH', inControl: 'Identity can be rebuilt; this is a normal transition', notInControl: 'Grief for the old identity' } }
     ]
   },
 

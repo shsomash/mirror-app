@@ -15,7 +15,23 @@ export const connectionsTree = {
       { label: 'Loneliness or isolation', next: 'loneliness_pattern', rootCause: null },
       { label: 'Boundaries and reciprocity', next: 'boundaries_issue', rootCause: null },
       { label: 'Community or belonging', next: 'community_issue', rootCause: null },
-      { label: 'Conflict with a specific person', next: 'conflict_who', rootCause: null }
+      { label: 'Conflict with a specific person', next: 'conflict_who', rootCause: null },
+      { label: 'Caregiving strain (child, parent, partner, or other)', next: 'caregiving_strain', rootCause: null }
+    ]
+  },
+
+  // ════════════════════════════════════════════════
+  //  BRANCH: CAREGIVING STRAIN (broader than elder care)
+  // ════════════════════════════════════════════════
+  'caregiving_strain': {
+    id: 'caregiving_strain',
+    question: 'Who are you caring for?',
+    options: [
+      { label: 'Aging parent', next: null, rootCause: { id: 'elder_care_burden_broad', label: 'Elder care burden', agency: 'PARTIAL', inControl: 'Sharing load, seeking support, setting limits', notInControl: 'The aging process and care needs' } },
+      { label: 'Child with special needs or illness', next: null, rootCause: { id: 'special_needs_caregiving', label: 'Special needs child caregiving', agency: 'PARTIAL', inControl: 'Support, respite, advocacy', notInControl: "The child's condition" } },
+      { label: 'Partner with illness or disability', next: null, rootCause: { id: 'partner_caregiving', label: 'Partner caregiving burden', agency: 'PARTIAL', inControl: 'Seeking support; maintaining your own health', notInControl: "Your partner's condition" } },
+      { label: 'Multiple people depending on me', next: null, rootCause: { id: 'sandwich_generation', label: 'Sandwich generation (caregiving in multiple directions)', agency: 'PARTIAL', inControl: 'Prioritizing, delegating where possible', notInControl: 'The demands are genuinely competing' } },
+      { label: 'Caregiving has taken over my identity', next: null, rootCause: { id: 'caregiver_identity_loss', label: 'Caregiver identity loss', agency: 'PARTIAL', inControl: 'Reclaiming even small parts of yourself', notInControl: 'The caregiving demands are real' } }
     ]
   },
 
@@ -44,7 +60,19 @@ export const connectionsTree = {
       { label: 'External stress straining relationship', next: 'external_stress', rootCause: null },
       { label: 'Considering leaving but unsure', next: 'leaving_unsure', rootCause: null },
       { label: 'Staying for reasons other than love', next: 'staying_reasons', rootCause: null },
-      { label: 'Codependency', next: null, rootCause: { id: 'codependency', label: 'Codependency pattern', agency: 'PARTIAL', inControl: 'Your part is addressable', notInControl: 'The dynamic involves both people' } }
+      { label: 'Codependency', next: null, rootCause: { id: 'codependency', label: 'Codependency pattern', agency: 'PARTIAL', inControl: 'Your part is addressable', notInControl: 'The dynamic involves both people' } },
+      { label: 'Conflict avoidance (we never fight but nothing gets resolved)', next: 'conflict_avoidance_pattern', rootCause: null }
+    ]
+  },
+
+  'conflict_avoidance_pattern': {
+    id: 'conflict_avoidance_pattern',
+    question: "What's behind the avoidance?",
+    options: [
+      { label: 'Fear of the other person\'s reaction', next: null, rootCause: { id: 'conflict_avoidance_fear', label: 'Conflict avoidance (fear of reaction)', agency: 'PARTIAL', inControl: 'Learning to tolerate discomfort in conversations', notInControl: "The other person's reaction" } },
+      { label: 'Grew up in a home where conflict was dangerous', next: null, rootCause: { id: 'conflict_avoidance_childhood', label: 'Conflict avoidance (learned in childhood)', agency: 'PARTIAL', inControl: 'The pattern is changeable with practice', notInControl: 'The childhood experience shaped this deeply' } },
+      { label: 'Keeping the peace is more important to me than being heard', next: null, rootCause: { id: 'conflict_avoidance_peacekeeping', label: 'Conflict avoidance (peacekeeping at own expense)', agency: 'HIGH', inControl: 'Your voice matters; raising it is a skill', notInControl: null } },
+      { label: 'Don\'t know how to have a disagreement without it escalating', next: null, rootCause: { id: 'conflict_avoidance_skill_gap', label: 'Conflict avoidance (skill gap)', agency: 'HIGH', inControl: 'Healthy conflict is a learnable skill', notInControl: null } }
     ]
   },
 
@@ -175,8 +203,8 @@ export const connectionsTree = {
     id: 'family_parents',
     question: "What's the challenge?",
     options: [
-      { label: 'Toxic or narcissistic parent', next: null, rootCause: { id: 'toxic_parent', label: 'Toxic or narcissistic parent', agency: 'HIGH', inControl: 'Boundaries, contact level', notInControl: 'The parent will likely not change' } },
-      { label: 'Enmeshed family', next: null, rootCause: { id: 'enmeshed_family', label: 'Enmeshed family system', agency: 'HIGH', inControl: 'Individuation is possible', notInControl: 'Family will resist' } },
+      { label: 'Toxic or narcissistic parent', next: null, rootCause: { id: 'toxic_parent', label: 'Toxic or narcissistic parent', agency: 'PARTIAL', inControl: 'Boundaries, contact level', notInControl: 'The parent will likely not change; childhood impact is real' } },
+      { label: 'Enmeshed family', next: null, rootCause: { id: 'enmeshed_family', label: 'Enmeshed family system', agency: 'PARTIAL', inControl: 'Individuation is possible', notInControl: 'Family will resist; deep patterns take time' } },
       { label: 'Childhood trauma', next: null, rootCause: { id: 'childhood_trauma_family', label: 'Childhood trauma from family', agency: 'PARTIAL', inControl: 'Processing the trauma', notInControl: "The past can't be undone" } },
       { label: 'Elder care burden', next: null, rootCause: { id: 'elder_care_burden', label: 'Elder care burden', agency: 'PARTIAL', inControl: 'Sharing load, seeking support', notInControl: 'The aging process' } },
       { label: 'Duty without genuine connection', next: null, rootCause: { id: 'duty_based_relationship', label: 'Duty-based relationship', agency: 'PARTIAL', inControl: 'Deciding what level of contact works for you', notInControl: "You can't create genuine connection unilaterally" } },
@@ -278,7 +306,7 @@ export const connectionsTree = {
     id: 'loneliness_pattern',
     question: "What's the pattern?",
     options: [
-      { label: 'Objectively isolated', next: null, rootCause: { id: 'objective_isolation', label: 'Objective isolation', agency: 'HIGH', inControl: 'Building connections is possible', notInControl: null } },
+      { label: 'Objectively isolated', next: null, rootCause: { id: 'objective_isolation', label: 'Objective isolation', agency: 'PARTIAL', inControl: 'Building connections is possible', notInControl: 'Geographic, health, or circumstantial barriers may be real' } },
       { label: 'Surrounded but lonely', next: 'loneliness_surrounded', rootCause: null },
       { label: 'Lost someone central', next: null, rootCause: { id: 'grief_loneliness', label: 'Grief-related loneliness', agency: 'PARTIAL', inControl: 'Processing grief; new connections are possible', notInControl: 'The loss is permanent' } },
       { label: 'New life stage', next: 'loneliness_lifestage', rootCause: null },

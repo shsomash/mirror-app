@@ -298,7 +298,7 @@ export const emotionalTree = {
       { label: 'Worth tied to finances or net worth', next: null, rootCause: { id: 'rc_financial_selfworth', label: 'Financial-based self-worth', agency: 'HIGH', inControl: 'Worth is not net worth', notInControl: null } },
       { label: 'Only feel lovable if...', next: null, rootCause: { id: 'rc_relationship_selfworth', label: 'Relationship-based self-worth ("only lovable if...")', agency: 'PARTIAL', inControl: 'Addressable; often attachment-related', notInControl: null } },
       { label: 'Never really developed a sense of inherent worth', next: null, rootCause: { id: 'rc_never_developed_worth', label: 'Never developed sense of inherent worth', agency: 'PARTIAL', inControl: 'Buildable, even late in life', notInControl: 'Takes sustained work' } },
-      { label: 'None of the above', next: null, rootCause: { id: 'rc_critical_parent_voice', label: 'Internalized critical parent voice', agency: 'HIGH', inControl: 'The inner critic can be changed', notInControl: "The original experience can't" } }
+      { label: 'None of the above', next: null, rootCause: { id: 'rc_critical_parent_voice', label: 'Internalized critical parent voice', agency: 'PARTIAL', inControl: 'The inner critic can be changed', notInControl: "The original experience can't" } }
     ]
   },
 

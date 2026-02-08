@@ -42,7 +42,8 @@ export function renderLanding(onStart) {
       <h1>Your Mirror</h1>
       <p class="subtitle">
         This is a mirror. It will ask you questions about five areas of your life
-        and reflect back what it sees &mdash; what's working, what's not, and what's
+        &mdash; about what truly matters to you &mdash;
+        and reflect back what it sees: what's working, what's not, and what's
         in your control. It takes 10&ndash;20 minutes.
       </p>
       <button class="btn-primary" id="start-btn">Begin</button>
@@ -51,6 +52,10 @@ export function renderLanding(onStart) {
         No login. No accounts. No data stored. No cookies. No tracking.<br>
         Nothing leaves your browser. When you close this tab, everything is gone.
       </div>
+      <p class="disclaimer-note" style="margin-top: 16px; font-size: 0.85rem; color: var(--text-muted);">
+        This tool is not a replacement for professional help. If you are in crisis
+        or need clinical support, please reach out to a qualified professional.
+      </p>
     </div>
   `);
   document.getElementById('start-btn').addEventListener('click', onStart);
@@ -198,7 +203,7 @@ export function renderTransition({ concerns, strengths, neutrals, onSelect, onAl
     emotional: 'Emotional Well-Being',
     financial: 'Financial Well-Being',
     connections: 'Connections',
-    identity: 'Identity & Meaning'
+    identity: 'Identity'
   };
 
   let badges = '<div class="dimension-summary">';
@@ -267,7 +272,7 @@ export function renderRootCauseFound({ rootCause, dimension, onExploreMore, onSh
     emotional: 'Emotional Well-Being',
     financial: 'Financial Well-Being',
     connections: 'Connections',
-    identity: 'Identity & Meaning'
+    identity: 'Identity'
   };
 
   const agencyClass = {
@@ -335,7 +340,7 @@ export function renderExploreMoreSelection({ unexplored, onSelect, onShowMirror 
     emotional: 'Emotional Well-Being',
     financial: 'Financial Well-Being',
     connections: 'Connections',
-    identity: 'Identity & Meaning'
+    identity: 'Identity'
   };
 
   render(`

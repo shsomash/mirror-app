@@ -5,10 +5,10 @@ const patternDefinitions = [
     id: 'overwork_cascade',
     name: 'Overwork Cascade',
     triggerRootCauses: [
-      'anxiety_driven_insomnia', 'stimulation_driven_wakefulness',
-      'overwork', 'emotional_exhaustion_burnout',
-      'time_scarcity', 'workaholism',
-      'achievement_based_self_worth', 'conditional_self_worth'
+      'rc_anxiety_insomnia', 'rc_stimulation_wakefulness',
+      'rc_overwork', 'rc_emotional_exhaustion',
+      'rc_time_scarcity_movement', 'rc_time_scarcity_eating',
+      'rc_workaholism', 'rc_conditional_achievement'
     ],
     checkQuestions: [
       {
@@ -57,10 +57,10 @@ const patternDefinitions = [
     id: 'financial_strain_cascade',
     name: 'Financial Strain Cascade',
     triggerRootCauses: [
-      'structural_poverty', 'gig_freelance_volatility', 'job_loss',
-      'lifestyle_inflation', 'credit_card_lifestyle', 'credit_card_low_income',
-      'medical_debt', 'payday_loan_cycle', 'financial_avoidance_shame',
-      'financial_avoidance_overwhelm', 'income_insufficient_essentials'
+      'rc_structural_poverty', 'rc_gig_volatility', 'rc_job_loss',
+      'rc_lifestyle_inflation', 'rc_cc_lifestyle', 'rc_cc_low_income',
+      'rc_medical_debt', 'rc_payday_loans', 'rc_avoidance_shame',
+      'rc_avoidance_overwhelm', 'rc_income_insufficient_savings'
     ],
     checkQuestions: [
       {
@@ -107,9 +107,9 @@ const patternDefinitions = [
     id: 'identity_collapse',
     name: 'Identity Collapse',
     triggerRootCauses: [
-      'grew_into_others_expectations', 'identity_built_on_single_role',
-      'life_transition_disruption', 'fear_of_self_knowledge',
-      'identity_diffusion', 'never_taught_independent_identity'
+      'rc_others_expectations', 'rc_identity_single_role',
+      'rc_life_transition_disruption', 'rc_fear_self_knowledge',
+      'rc_identity_diffusion', 'rc_never_taught_identity'
     ],
     checkQuestions: [
       {
@@ -158,7 +158,7 @@ const patternDefinitions = [
     triggerRootCauses: [
       'people_pleasing', 'fear_of_abandonment_compliance',
       'codependency', 'caretaker_identity',
-      'poor_boundary_setting', 'generosity_beyond_means'
+      'rc_poor_boundaries_overload', 'rc_generosity_beyond_means'
     ],
     checkQuestions: [
       {
@@ -205,9 +205,9 @@ const patternDefinitions = [
     id: 'unprocessed_trauma_system',
     name: 'Unprocessed Trauma System',
     triggerRootCauses: [
-      'ptsd', 'complex_ptsd', 'trauma_based_shutdown',
-      'anxiety_trauma_driven_waking', 'trauma_hyperreactivity',
-      'childhood_emotional_invalidation', 'childhood_trauma_family'
+      'rc_ptsd', 'rc_cptsd', 'rc_trauma_shutdown',
+      'rc_anxiety_trauma_waking', 'rc_trauma_hyperreactivity',
+      'rc_childhood_invalidation', 'childhood_trauma_family'
     ],
     checkQuestions: [
       {
@@ -254,10 +254,10 @@ const patternDefinitions = [
     id: 'depression_constellation',
     name: 'Depression Constellation',
     triggerRootCauses: [
-      'moderate_depression', 'severe_depression', 'dysthymia',
-      'functional_depression', 'situational_depression',
-      'depression_related_fatigue', 'depression_related_sleep',
-      'depression_suppressed_appetite', 'depression_cognitive_fog'
+      'rc_moderate_depression', 'rc_severe_depression', 'rc_dysthymia',
+      'rc_functional_depression', 'rc_situational_depression',
+      'rc_depression_fatigue', 'rc_depression_sleep',
+      'rc_depression_appetite', 'rc_depression_cognitive_fog'
     ],
     checkQuestions: [
       {
@@ -304,10 +304,10 @@ const patternDefinitions = [
     id: 'the_avoider',
     name: 'The Avoider',
     triggerRootCauses: [
-      'financial_avoidance_shame', 'financial_avoidance_overwhelm',
-      'health_anxiety_avoidance', 'minimization_pattern',
-      'medical_mistrust', 'self_neglect_not_serious',
-      'debt_shame_spiral'
+      'rc_avoidance_shame', 'rc_avoidance_overwhelm',
+      'rc_health_anxiety_avoidance', 'rc_minimization',
+      'rc_medical_mistrust', 'rc_self_neglect_serious',
+      'rc_debt_shame'
     ],
     checkQuestions: [
       {
@@ -336,11 +336,11 @@ const patternDefinitions = [
     id: 'self_medication_spiral',
     name: 'Self-Medication Spiral',
     triggerRootCauses: [
-      'alcohol_dependence', 'alcohol_stress_valve', 'alcohol_sleep_aid',
-      'alcohol_emotional_anesthetic', 'alcohol_masking_anxiety',
-      'cannabis_sleep_aid', 'cannabis_dependence',
-      'drug_dependence', 'self_medicating_substances',
-      'screen_gaming_compulsion', 'substance_numbing_emotions'
+      'rc_alcohol_dependence', 'rc_alcohol_stress', 'rc_alcohol_sleep',
+      'rc_alcohol_anesthetic', 'rc_alcohol_masking',
+      'rc_cannabis_sleep', 'rc_cannabis_dependence',
+      'rc_drug_dependence',
+      'rc_screen_compulsion', 'rc_substance_numbing'
     ],
     checkQuestions: [
       {
@@ -387,10 +387,10 @@ const patternDefinitions = [
     id: 'the_comparer',
     name: 'The Comparer',
     triggerRootCauses: [
-      'social_comparison_pattern', 'comparison_spending',
-      'body_image_distortion', 'internalized_weight_stigma',
-      'appearance_dependent_self_worth', 'comparison_to_others',
-      'financial_comparison_peers'
+      'rc_social_comparison', 'rc_comparison_spending', 'rc_comparison_spending_appearances',
+      'rc_body_image_distortion', 'rc_weight_stigma',
+      'rc_appearance_worth', 'rc_comparison_others',
+      'rc_financial_comparison'
     ],
     checkQuestions: [
       {
@@ -419,10 +419,10 @@ const patternDefinitions = [
     id: 'control_as_coping',
     name: 'Control as Coping',
     triggerRootCauses: [
-      'orthorexic_pattern', 'control_seeking_food',
-      'compensatory_cycle', 'compulsive_exercise',
-      'perfectionism', 'perfectionism_inflating_tasks',
-      'optimization_fixation_food'
+      'rc_orthorexic', 'rc_control_food',
+      'rc_compensatory_cycle', 'rc_compulsive_exercise',
+      'rc_perfectionism', 'rc_perfectionism_overload',
+      'rc_optimization_food'
     ],
     checkQuestions: [
       {
@@ -460,9 +460,9 @@ const patternDefinitions = [
     id: 'caregiver_depletion',
     name: 'Caregiver Depletion',
     triggerRootCauses: [
-      'caregiver_burnout', 'caregiving_schedule_chaos',
-      'caregiving_environmental_disruption', 'caregiver_overwhelm',
-      'caregiving_limiting_work', 'caregiver_isolation',
+      'rc_caregiver_burnout', 'rc_caregiving_schedule_chaos',
+      'rc_caregiving_env_disruption', 'rc_caregiver_overwhelm',
+      'rc_caregiving_limiting_hours', 'caregiver_isolation',
       'elder_care_burden'
     ],
     checkQuestions: [
@@ -510,11 +510,11 @@ const patternDefinitions = [
     id: 'grief_cascade',
     name: 'Grief Cascade',
     triggerRootCauses: [
-      'acute_grief', 'complicated_grief', 'ambiguous_loss',
-      'cumulative_loss', 'grief_suppressed', 'anticipatory_grief',
-      'grief_related_appetite_loss', 'grief_related_numbness',
-      'grief_related_cognitive_fog', 'unprocessed_grief_anger',
-      'loss_of_health_capacity', 'loss_of_identity', 'loss_of_expected_future'
+      'rc_acute_grief', 'rc_complicated_grief', 'rc_ambiguous_loss',
+      'rc_cumulative_loss', 'rc_grief_suppressed', 'rc_anticipatory_grief',
+      'rc_grief_appetite', 'rc_grief_numbness',
+      'rc_grief_cognitive_fog', 'rc_grief_anger',
+      'rc_loss_health', 'rc_loss_identity', 'rc_loss_expected_future'
     ],
     checkQuestions: [
       {
@@ -561,10 +561,10 @@ const patternDefinitions = [
     id: 'chronic_condition_cascade',
     name: 'Chronic Condition Cascade',
     triggerRootCauses: [
-      'managed_chronic_condition', 'inadequately_managed_pain',
-      'central_sensitization', 'chronic_fatigue_me',
-      'pain_disrupted_sleep', 'pain_limited_movement',
-      'body_as_obstacle'
+      'rc_managed_chronic', 'rc_inadequate_pain_mgmt',
+      'rc_central_sensitization', 'rc_cfs_me', 'rc_energy_cfs_me',
+      'rc_pain_disrupted_sleep', 'rc_pain_limited_movement',
+      'rc_body_obstacle'
     ],
     checkQuestions: [
       {
@@ -611,9 +611,10 @@ const patternDefinitions = [
     id: 'achievement_trap',
     name: 'Achievement Trap',
     triggerRootCauses: [
-      'conditional_self_worth', 'perfectionism',
-      'imposter_feelings', 'workaholism',
-      'overwork', 'external_validation_dependency'
+      'rc_conditional_achievement', 'rc_perfectionism',
+      'rc_imposter', 'rc_workaholism',
+      'rc_overwork', 'rc_external_validation',
+      'rc_arriving_emptiness', 'rc_productivity_trap'
     ],
     checkQuestions: [
       {

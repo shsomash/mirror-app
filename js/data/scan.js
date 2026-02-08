@@ -30,7 +30,7 @@ export const dimensionScan = [
   {
     id: 'financial',
     label: 'Financial Well-Being',
-    text: "What about your financial situation?",
+    text: "What about your financial situation \u2014 income, spending, debt, savings, and how money makes you feel?",
     strengths: [
       'Income covers my needs',
       'Spending is under control',
@@ -55,7 +55,7 @@ export const dimensionScan = [
   },
   {
     id: 'identity',
-    label: 'Identity & Meaning',
+    label: 'Identity',
     text: "And your sense of self \u2014 do you generally know who you are and what matters to you?",
     strengths: [
       'Know who I am and feel authentic',
